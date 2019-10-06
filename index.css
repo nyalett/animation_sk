@@ -1,0 +1,99 @@
+input:focus {
+    border: 2px solid red;
+    outline: none ;
+}
+input:required {
+    background: green;
+}
+div:nth-child(2n) {
+    font-size: 25px ;
+}
+.block:first-child {
+    color: orange;
+}
+.block:last-child {
+    text-decoration: underline;
+}
+span:nth-of-type(1n) {
+    color:purple;
+}
+header::after {
+    content: "+";
+}
+header::before {
+    content: "\2693" ;
+    display: inline-block ;
+    width: 20px;
+    height: 2px;
+    background: blue ;
+}
+
+.z-index div {
+    width:  150px ;
+    height: 150px ;
+    position: relative ;
+}
+@keyframes example {
+    0% {
+    transform: translate(0px, 0px);
+    background: radial-gradient(circle,blue, yellow, green);
+    }
+    50% {
+        transform: translate(50px, 50px);
+        background: radial-gradient(circle,red, black, rgb(128, 0, 122));
+    }
+    100% {
+    transform: translate(100px, 100px);
+    background: radial-gradient(circle,rgb(0, 255, 255), rgba(185, 250, 5, 0.473), rgb(197, 189, 197));
+    }
+    }
+.z-index div:first-child {
+    border-radius: 1px 10%;
+    background: radial-gradient(circle,blue, yellow, green);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+.z-index div:first-child:hover {
+    z-index: 1;
+    /* transform: translate(50px, 100px) ; */
+}
+.z-index div:nth-child(2) {
+    background: linear-gradient(to right, red, yellow);
+    top: -50px;
+    left: 50px;
+    border-radius: 30px 10%;
+
+}
+.z-index div:nth-child(2):hover{
+    z-index: 1;
+    transform: scale(3.2);
+}
+.z-index div:last-child {
+    background: springgreen;
+    top: -150px;
+    left: 150px;
+    border-radius: 30px/20px 10%;
+    opacity: 0.5;
+
+}
+.z-index div:last-child:hover {
+    background: springgreen;
+    opacity: 1.0;
+    transform: rotate(45deg) ;
+}
+.z-index div:last-child {
+    box-shadow: 0 0 20px 30px rgba(red, green, blue, alpha);
+}
+.star, .item::before {
+    display: inline-block ;
+    position: relative;
+    top: 5px;
+    left: -5px ;
+    content: "\a51" ;
+}
